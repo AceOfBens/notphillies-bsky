@@ -172,7 +172,7 @@ export default class Bot
           if (cardBuffer.length > 1000000)
           {
             console.log("file too big");
-            cardResponse = await axios.get("https://media.d3.nhle.com/image/private/t_ratio16_9-size50/v1697721957/prd/assets/flyers/assets/phi_2568x1144.png", { responseType: 'arraybuffer'}); 
+            cardResponse = await axios.get("https://a.vsstatic.com/mobile/app/mlb/logos/app/philadelphia-phillies-app-2.jpg", { responseType: 'arraybuffer'}); 
             cardBuffer = Buffer.from(cardResponse.data, "utf-8");
           }
           const cardUpload = await this.userAgent.com.atproto.repo.uploadBlob(cardBuffer, {encoding: "image/png"});
