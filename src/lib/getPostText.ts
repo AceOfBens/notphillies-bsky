@@ -4,7 +4,7 @@ const mastodon = new Mastodon.API({access_token: 'PRZhmwmS5fpkXo442UE8SGHv8TL7XO
 /*
 	getPostText():
 
-	This function performs a Mastodon API GET request to get the n most recent tweets created by Walt Ruff. Using this, the function formats these strings down into the desired plaintext of a Bluesky post, stripping out all of the unnecessary HTML tag notation and handling formatting such that the text is compatible with Bluesky.
+	This function performs a Mastodon API GET request to get the n most recent tweets created by the Phillies. Using this, the function formats these strings down into the desired plaintext of a Bluesky post, stripping out all of the unnecessary HTML tag notation and handling formatting such that the text is compatible with Bluesky.
 
 	args: None
 
@@ -20,7 +20,7 @@ export default async function getPostText()
 	var logoReg = new RegExp("&nbsp;", "g"); // A regex to deal with &nbsp;. Should be deleted.
 	var twitterReg = new RegExp("@twitter.com", "g"); // A regex to deal with @twitter.com. Should be deleted.
 	var sportsBotsReg = new RegExp("@sportsbots.xyz", "g");
-	var philliesReg = new RegExp("@phillies@sportsbots.xyz", "g"); // A regex to deal with Phillies's @. Should be replaced with the bot's @.
+	var philliesReg = new RegExp("@notphillies@sportsbots.xyz", "g"); // A regex to deal with Phillies's @. Should be replaced with the bot's @.
 	var sportsBotsReg = new RegExp("@sportsbots.xyz", "g");
 	var tagReg = new RegExp("<(:?[^>]+)>", "g"); // A general regex for HTML. Used to get the plaintext value of the mastodon post without tag notation.
 	var invalidLinkReg = new RegExp("\\S*(\\.com|\\.ca|\\.org|\\.net)\\S*(…|\\.\\.\\.)", "g");
