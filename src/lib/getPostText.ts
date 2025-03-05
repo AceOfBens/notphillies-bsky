@@ -34,8 +34,6 @@ export default async function getPostText()
 	var wipReg = new RegExp("@SportsRadioWIP", "g");
 
 	var abelReg = new RegExp("@mickabel13", "g");
-	var clemensKodyReg = new RegExp("@kodyclem", "g");
-	var clemensRodgerReg = new RegExp("@rodgerclemens", "g");
 	var harperReg = new RegExp("@bryceharper3", "g");
 	var kennedyReg = new RegExp("@KennedyBuddy", "g");
 	var krukReg = new RegExp("@johnkruk", "g");
@@ -127,8 +125,6 @@ export default async function getPostText()
 		contentString = contentString.replace(wipReg, "@sportsradiowip.bsky.social");
 		// player accounts
 		contentString = contentString.replace(abelReg, "Mick Abel");
-		contentString = contentString.replace(clemensKodyReg, "Kody Clemens");
-		contentString = contentString.replace(clemensRodgerReg, "Rodger Clemens");
 		contentString = contentString.replace(harperReg, "Bryce Harper");
 		contentString = contentString.replace(kennedyReg, "Buddy Kennedy");
 		contentString = contentString.replace(krukReg, "John Kruk");
