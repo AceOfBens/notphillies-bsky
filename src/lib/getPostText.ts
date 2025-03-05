@@ -20,8 +20,38 @@ export default async function getPostText()
 	var logoReg = new RegExp("&nbsp;", "g"); // A regex to deal with &nbsp;. Should be deleted.
 	var twitterReg = new RegExp("@twitter.com", "g"); // A regex to deal with @twitter.com. Should be deleted.
 	var sportsBotsReg = new RegExp("@sportsbots.xyz", "g");
-	var philliesReg = new RegExp("@notphillies@sportsbots.xyz", "g"); // A regex to deal with Phillies's @. Should be replaced with the bot's @.
+	var philliesReg = new RegExp("@phillies@sportsbots.xyz", "g"); // A regex to deal with Phillies's @. Should be replaced with the bot's @.
 	var sportsBotsReg = new RegExp("@sportsbots.xyz", "g");
+
+	var eaglesReg = new RegExp("@Eagles", "g");
+	var flyersReg = new RegExp("@NHLFlers", "g");
+	var sixersReg = new RegExp("@sixers", "g");
+	var unionReg = new RegExp("@PhilaUnion", "g");
+	var wingsReg = new RegExp("@NLLwings", "g");
+	var cbpReg = new RegExp("@PhilliesCBP", "g");
+	var mlbReg = new RegExp("@MLB", "g");
+	var mlbnReg = new RegExp("@MLBNetwork", "g");
+	var wipReg = new RegExp("@SportsRadioWIP", "g");
+
+	var abelReg = new RegExp("@mickabel13", "g");
+	var clemensKodyReg = new RegExp("@kodyclem", "g");
+	var clemensRodgerReg = new RegExp("@rodgerclemens", "g");
+	var harperReg = new RegExp("@bryceharper3", "g");
+	var kennedyReg = new RegExp("@KennedyBuddy", "g");
+	var krukReg = new RegExp("@johnkruk", "g");
+	var marshReg = new RegExp("@brandon_march22", "g");
+	var realmutoReg = new RegExp("@JTRealmuto", "g");
+	var rossReg = new RegExp("@JoeRoss21", "g");
+	var schwarberReg = new RegExp("@kschwarb12", "g");
+	var sosaReg = new RegExp("@MunditoSosa", "g");
+	var stottReg = new RegExp("@bryson_stott10", "g");
+	var strahmReg = new RegExp("@MattStrahm", "g");
+	var stubbsReg = new RegExp("@GarrettStubbs", "g");
+	var turnerReg = new RegExp("@treavturner", "g");
+	var tylerReg = new RegExp("@KT_OU15", "g");
+	var walkerReg = new RegExp("@tai_walker", "g");
+	var wilsonReg = new RegExp("@Weston_Wilson8", "g");
+		
 	var tagReg = new RegExp("<(:?[^>]+)>", "g"); // A general regex for HTML. Used to get the plaintext value of the mastodon post without tag notation.
 	var invalidLinkReg = new RegExp("\\S*(\\.com|\\.ca|\\.org|\\.net)\\S*(…|\\.\\.\\.)", "g");
 
@@ -75,7 +105,45 @@ export default async function getPostText()
 		var contentJSON = objJSON[i]["content"]; // Filter through all the values of the JSON object, to get just the content of post i. 
 		var contentString = JSON.stringify(contentJSON); // Convert the content of the post into a JSON string.
 		contentString = contentString.slice(1,-1); // Remove the quotation marks.
-		contentString = contentString.replace(twitterReg, "").replace(philliesReg, "notphillies.bsky.social").replace(sportsBotsReg, "").replace(logoReg, "").replace(quoteReg, `"`).replace(andReg, "&").replace(pReg, "\n\n").replace(brReg, "\n").replace(tagReg, ""); //Use the ", &, <p>, and <br> regexes to apply appropriate formatting. Then use the general regex to remove the HTML formatting from the mastodon post. 
+		// meta data
+		contentString = contentString.replace(twitterReg, "");
+		contentString = contentString.replace(philliesReg, "notphillies.bsky.social");
+		contentString = contentString.replace(sportsBotsReg, "");
+		contentString = contentString.replace(logoReg, "");
+		contentString = contentString.replace(quoteReg, `"`);
+		contentString = contentString.replace(andReg, "&");
+		contentString = contentString.replace(pReg, "\n\n");
+		contentString = contentString.replace(brReg, "\n");
+		contentString = contentString.replace(tagReg, ""); //Use the ", &, <p>, and <br> regexes to apply appropriate formatting. Then use the general regex to remove the HTML formatting from the mastodon post. 
+		// brand accounts
+		contentString = contentString.replace(eaglesReg, "@philadelphiaeagles.bsky.social");
+		contentString = contentString.replace(flyersReg, "Flyers");
+		contentString = contentString.replace(sixersReg, "@sixersnba.bsky.social");
+		contentString = contentString.replace(unionReg, "@philadelphiaunion.com");
+		contentString = contentString.replace(wingsReg, "Wings");
+		contentString = contentString.replace(cbpReg, "Citizens Bank Park");
+		contentString = contentString.replace(mlbReg, "@MLB.com");
+		contentString = contentString.replace(mlbnReg, "MLB Network");
+		contentString = contentString.replace(wipReg, "@sportsradiowip.bsky.social");
+		// player accounts
+		contentString = contentString.replace(abelReg, "Mick Abel");
+		contentString = contentString.replace(clemensKodyReg, "Kody Clemens");
+		contentString = contentString.replace(clemensRodgerReg, "Rodger Clemens");
+		contentString = contentString.replace(harperReg, "Bryce Harper");
+		contentString = contentString.replace(kennedyReg, "Buddy Kennedy");
+		contentString = contentString.replace(krukReg, "John Kruk");
+		contentString = contentString.replace(marshReg, "Brandon Marsh");
+		contentString = contentString.replace(realmutoReg, "JT Realmuto");
+		contentString = contentString.replace(rossReg, "Joe Ross");
+		contentString = contentString.replace(schwarberReg, "Kyle Schwarber");
+		contentString = contentString.replace(sosaReg, "Edmundo Sosa");
+		contentString = contentString.replace(stottReg, "Bryson Stott");
+		contentString = contentString.replace(strahmReg, "Matt Strahm");
+		contentString = contentString.replace(stubbsReg, "Garrett Stubbs");
+		contentString = contentString.replace(turnerReg, "Trea Turner");
+		contentString = contentString.replace(tylerReg, "Kyle Tyler");
+		contentString = contentString.replace(walkerReg, "Taijuan Walker");
+		contentString = contentString.replace(wilsonReg, "Weston Wilson");
 
 		if (contentString.includes("RT ") || contentString.includes("Retweet ") || contentString.includes("retweet ") || contentString.includes("RETWEET "))
 		{
