@@ -39,6 +39,7 @@ export default async function getPostText()
 	var krukReg = new RegExp("@johnkruk", "g");
 	var marshReg = new RegExp("@brandon_march22", "g");
 	var realmutoReg = new RegExp("@JTRealmuto", "g");
+	var rinconesReg = new RegExp("@gRinconesJr", "g"):
 	var rossReg = new RegExp("@JoeRoss21", "g");
 	var schwarberReg = new RegExp("@kschwarb12", "g");
 	var sosaReg = new RegExp("@MunditoSosa", "g");
@@ -130,6 +131,7 @@ export default async function getPostText()
 		contentString = contentString.replace(krukReg, "John Kruk");
 		contentString = contentString.replace(marshReg, "Brandon Marsh");
 		contentString = contentString.replace(realmutoReg, "JT Realmuto");
+		contentString = contentString.replace(rinconesReg, "Gabriel Rincones Jr");
 		contentString = contentString.replace(rossReg, "Joe Ross");
 		contentString = contentString.replace(schwarberReg, "Kyle Schwarber");
 		contentString = contentString.replace(sosaReg, "Edmundo Sosa");
