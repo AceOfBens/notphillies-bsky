@@ -22,6 +22,7 @@ export default async function getPostText()
 	var sportsBotsReg = new RegExp("@sportsbots.xyz", "g");
 	var philliesReg = new RegExp("@phillies@sportsbots.xyz", "g"); // A regex to deal with Phillies's @. Should be replaced with the bot's @.
 	var sportsBotsReg = new RegExp("@sportsbots.xyz", "g");
+	var gtReg = new RegExp("&gt;", "g");
 
 	var eaglesReg = new RegExp("@Eagles", "g");
 	var flyersReg = new RegExp("@NHLFlers", "g");
@@ -114,6 +115,7 @@ export default async function getPostText()
 		contentString = contentString.replace(pReg, "\n\n");
 		contentString = contentString.replace(brReg, "\n");
 		contentString = contentString.replace(tagReg, ""); //Use the ", &, <p>, and <br> regexes to apply appropriate formatting. Then use the general regex to remove the HTML formatting from the mastodon post. 
+		contentString = contentString.replace(gtReg, ">");
 		// brand accounts
 		contentString = contentString.replace(eaglesReg, "@philadelphiaeagles.bsky.social");
 		contentString = contentString.replace(flyersReg, "Flyers");
