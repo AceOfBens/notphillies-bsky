@@ -118,14 +118,14 @@ export default async function getPostText()
 		contentString = contentString.replace(gtReg, ">");
 		// brand accounts
 		contentString = contentString.replace(eaglesReg, "@philadelphiaeagles.bsky.social");
-		contentString = contentString.replace(flyersReg, "Flyers");
-		contentString = contentString.replace(sixersReg, "@sixersnba.bsky.social");
-		contentString = contentString.replace(unionReg, "@philadelphiaunion.com");
-		contentString = contentString.replace(wingsReg, "Wings");
+		contentString = contentString.replace(flyersReg, "the Flyers");
+		contentString = contentString.replace(sixersReg, "the Sixers");
+		contentString = contentString.replace(unionReg, "The Union");
+		contentString = contentString.replace(wingsReg, "the Wings");
 		contentString = contentString.replace(cbpReg, "Citizens Bank Park");
-		contentString = contentString.replace(mlbReg, "@MLB.com");
+		contentString = contentString.replace(mlbReg, "MLB");
 		contentString = contentString.replace(mlbnReg, "MLB Network");
-		contentString = contentString.replace(wipReg, "@sportsradiowip.bsky.social");
+		contentString = contentString.replace(wipReg, "94 WIP");
 		// player accounts
 		contentString = contentString.replace(abelReg, "Mick Abel");
 		contentString = contentString.replace(harperReg, "Bryce Harper");
