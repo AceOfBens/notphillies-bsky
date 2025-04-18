@@ -1,4 +1,15 @@
-# Build your own Bluesky bot 🦋
+# Bluesky Mirror Bot 🦋
+
+This is a template repo for building a [Bluesky](https://bsky.app/) bot that mirrors a Twitter/X account.
+
+##Credits
+* Phil Nash for providing the code for building a bot that posts on its own schedule.
+* acarters for providing the code for building a bot that mirrors a Twitter/X account by pulling from existing mirror bots on Mastodon, due to the access restrictions on X's API.
+* I (Ben Ace) cannot stress enough how much I didn't do much to this code and can't take credit for any of this repo.
+
+## FAQ
+
+###
 
 This is a template repo for building [Bluesky](https://bsky.app/) bots that post on their own schedule. It uses [TypeScript](https://www.typescriptlang.org/) to build the bot and [GitHub Actions](https://docs.github.com/en/actions) to schedule the posts.
 
