@@ -1,157 +1,50 @@
 # Bluesky Mirror Bot 🦋
 
-This is a template repo for building a [Bluesky](https://bsky.app/) bot that mirrors a Twitter/X account.
+This repository is used to build the bot that cross posts content from [@Phillies](https://x.com/Phillies) on X/Twitter to [@notphillies.bsky.social](https://bsky.app/profile/notphillies.bsky.social) on Bluesky by pulling from Mastodon's API and utitilizing the [Philadelphia Phillies mirror bot](https://mastodon.social/@Phillies@sportsbots.xyz) on sportsbots.xyz.
 
 ## Credits
 * [Phil Nash](https://github.com/philnash) for providing the code for building a bot that posts on its own schedule. [Phil Nash's Bluesky bot template](https://github.com/philnash/bsky-bot)
-* [acarters](https://github.com/acarters) for providing the code for building a bot that mirrors a Twitter/X account by pulling from existing mirror bots on Mastodon, due to the access restrictions on X's API.
-* I (Ben Ace) cannot stress enough how much I didn't do much to this code and can't take credit for any of this repo.
+* [acarters](https://github.com/acarters) for providing the code for building a bot that mirrors a X/Twitter account by pulling from existing mirror bots on Mastodon, due to the access restrictions on X's API. Most of the notes in the code that explain what each line does are from him.
+* I ([Ben Ace](https://bsky.app/profile/aceofbens.com/)) cannot stress enough how much I didn't do much to this code and can't take credit for any the building of this repo, but I did edit this template and outline the instructions below! I am not a developer but a [graphic designer and former content creator](https://aceofbens.com/) whose coding experience ends at tinkering with HTML and CSS on WordPress once in a while.
 
 ## FAQ
 
 ### How can I create my own?
 
-I created a [template with instructions](TK) on what to add or change in the README file. 
+I created a [template with instructions](https://github.com/AceOfBens/sports-mirror-bot-bsky/) on what to add or change in the [README file](https://github.com/AceOfBens/sports-mirror-bot-bsky/blob/main/README.md). 
 
 ### Does the bot post immediately when the Phillies account posts on Twitter?
 
-No. Sometimes I change tinker with this setting, but usually the bot is scheduled to check the [Mastodon mirror bot](TK) every 20 minutes. During busier times, like evenings (ET), which coincidentally is when the Phillies typically play and when their X/Twitter account posts the most often, this bot will check less often because Github's servers are running more repositories.
+No. Sometimes I change tinker with this setting, but usually the bot is scheduled to check the [Mastodon mirror bot](https://mastodon.social/@Phillies@sportsbots.xyz) every 20 minutes. During busier times, like evenings (Eastern Time), which coincidentally is when the Phillies typically play and when their X/Twitter account posts the most often, this bot will check less often because Github's servers are running more repositories.
 
-Because of this, sometimes the bot will not check for up to 3 hours and catch up on posts from several innings, so the time stamp on the Bluesky mirror post should be taken with a grain of salt. 
+Because of this, sometimes the bot will not check for up to 3 hours and catch up on posts from several innings, so the time stamp on the Bluesky mirror post should not be used as a reference for anything other than when Github Actions ran a workflow for this bot. 
 
-### This account liked one of my posts. Is it programmed to like posts its mentioned in?
+### This account liked one of my posts. Is it programmed to like posts it's mentioned in?
 
-No, if [@notphillies.bsky.social] liked your post, it was an actual human, and that actual human is [@aceofbens.com](https://bsky.app/profile/aceofbens.com) on Bluesky.
+No, there are no instances in which this bot is programmed to like posts on Bluesky. If [@notphillies.bsky.social](https://bsky.app/profile/notphillies.bsky.social) liked your post, it was an actual human, and that actual human is [@aceofbens.com](https://bsky.app/profile/aceofbens.com) on Bluesky.
+
+Generally, I try not to break the fourth wall on these mirror bot accounts. Even though I've taken every step to disclaim that the account is not officially affiliated with the Philadelphia Phillies in anyway, it feels disingenuous to make it about me by replying to fans or (re)posting content the Phillies have not shared on their official channels.
+
+That said, if the account is mentioned as a suggestion for someone to follow it, I appreciate that! So I like those posts to show that appreciation. Or, a few times, people have tagged this account to comment on a glitch, and I've liked those posts to let them know I'm aware of the issue and it has been or is being addressed.
+
+### Are this account's mentions and message requests monitored?
+
+Yes! I am actively logged into this account and try to check it at least once a day to make sure it's not broken in some way (as it has before and, unfortunately, I'm sure it will again). Currently, the DMs are closed, but I monitor the mentions (tags, replies, quotes) in case someone draws attention to an issue that way. Also, because spam bots are becoming more of an issue lately and I will hide their replies as I come across them.
 
 ### Can you make a bot for [insert X/Twitter account]?
 
-If there is a mirror bot for it on Mastodon (check [@sportsbots@mastodon.social](https://www.sportsbots.xyz/)), then technically yes I can, but I don't have enough email addresses to make so many new Bluesky accounts. Try it yourself!
+If there is a mirror bot for it on Mastodon (check [@sportsbots@mastodon.social](https://www.sportsbots.xyz/)), then technically yes I can, but, frankly, I don't have enough email addresses to make so many new Bluesky accounts. [Try it yourself](https://github.com/AceOfBens/sports-mirror-bot-bsky/blob/main/README.md)!
 
 ### How can I make a Bluesky mirror bot that isn't available on sportsbots.xyz?
 
+Great question! If there's no Mastodon mirror bot like the ones on sportsbots.xyz, then I have no idea. Like I said in the credits section at the top, I'm a graphic designer with experience as a social media manager, and the extent of my experience in coding is a few web design university classes. The *vast* majority of this bot was built by [philnash](https://github.com/philnash) and [acarters](https://github.com/acarters). I'm sorry that I can't be of more help here :(
 
+### How long will this bot be up for?
 
+That depends on MLB and the Philadelphia Phillies. There have been reports that [the NFL has told their teams not to use Bluesky](https://awfulannouncing.com/nfl/new-england-patriots-bluesky-shut-down-account.html), but this doesn't necessarily seem to be the case as there are several domain-verified MLB accounts that are posting regularly including the [Kansas City Royals](https://bsky.app/profile/did:plc:3rkgpi6qhb4p6ne4jk2kspzw), the [Pittsburgh Pirates](https://bsky.app/profile/did:plc:xtjr2ecuxb6wqjr3jfbwdu3m), The [San Francisco Giants](https://bsky.app/profile/did:plc:7e75ce7c352cm2th5pwojwdw), the [Boston Red Sox](https://bsky.app/profile/did:plc:y4mxqslm4dyn6mx6pldyn75o), and even their division rival, the [New York Mets](https://bsky.app/profile/did:plc:5knhhenmnuq5vva3rr4vo3nh). Although, many of these "active" accounts aren't cross posting everything from their X/Twitter accounts. For that reason, I'm currently unsure how active the Phillies' Bluesky account would have to be before I unplug this bot. It will probably also depend how long people find this bot useful.
 
+The Phillies made a Bluesky account in January 2025 that is domain verified ([@phillies.com](https://bsky.app/profile/phillies.com)), but as of now, they have not posted there yet, and it is unclear how much of a priority this may be. I do not know if contacting the Phillies will help push them to be active on Bluesky, and I do not recommend taking to other social media platforms to pester them, as [it's possible their social team is waiting on support from Bluesky's team](https://awfulannouncing.com/tech/bluesky-sports-top-priority-growth-spurt.html) before they begin adding the platform to their social media strategy.
 
+### I have another question that isn't answered here. How can I contact you?
 
-This is a template repo for building [Bluesky](https://bsky.app/) bots that post on their own schedule. It uses [TypeScript](https://www.typescriptlang.org/) to build the bot and [GitHub Actions](https://docs.github.com/en/actions) to schedule the posts.
-
-* [How to use](#how-to-use)
-  * [Things you will need](#things-you-will-need)
-    * [A Bluesky account](#a-bluesky-account)
-    * [Node.js](#nodejs)
-  * [Create a new repository from this template](#create-a-new-repository-from-this-template)
-  * [Running locally to test](#running-locally-to-test)
-  * [Create your own posts](#create-your-own-posts)
-  * [Deploy](#deploy)
-    * [Schedule](#schedule)
-    * [Environment variables](#environment-variables)
-  * [Set it live](#set-it-live)
-
-
-## How to use
-
-### Things you will need
-
-#### A Bluesky account
-
-To use this repo you will need a [Bluesky account](https://bsky.app/). [Sign up for an invite here](https://bsky.app/).
-
-Once you have an account for your bot, you will need to know your bot's handle and password (I recommend using an App Password, which you can create under your account's settings).
-
-#### Node.js
-
-To run this bot locally on your own machine you will need [Node.js](https://nodejs.org/en) version 18.16.0.
-
-### Create a new repository from this template
-
-Create your own project by clicking "Use this template" on GitHub and then "Create a new repository". Select an owner and give your new repository a name and an optional description. Then click "Create repository from template".
-
-Clone your new repository to your own machine.
-
-```sh
-git clone git@github.com:${YOUR_USERNAME}/${YOUR_REPO_NAME}.git
-cd ${YOUR_REPO_NAME}
-```
-
-### Running locally to test
-
-To run the bot locally you will need to install the dependencies:
-
-```sh
-npm install
-```
-
-Copy the `.env.example` file to `.env`.
-
-```sh
-cp .env.example .env
-```
-
-Fill in `.env` with your Bluesky handle and password.
-
-Build the project with:
-
-```sh
-npm run build
-```
-
-You can now run the bot locally with the command:
-
-```sh
-npm run dev
-```
-
-This will use your credentials to connect to Bluesky, but it *won't actually create a post yet*. If your credentials are correct, you should see the following printed to your terminal:
-
-```
-[TIMESTAMP] Posted: "Hello from the Bluesky API"
-```
-
-To have the bot create a post to your Bluesky account, in `index.ts` change line 4 to remove the `{ dryRun: true }` object:
-
-```diff
-- const text = await Bot.run(getPostText, { dryRun: true });
-+ const text = await Bot.run(getPostText);
-```
-
-Build the project again, then run the command to create a post to actually create the post with the API:
-
-```sh
-npm run build
-npm run dev
-```
-
-### Create your own posts
-
-Currently the bot calls on the function [`getPostText`](./src/lib/getPostText.ts) to get the text that it should post. This function returns the text "Hello from the Bluesky API" every time.
-
-To create your own posts you need to provide your own implementation of `getPostText`. You can do anything you want to generate posts, the `getPostText` function just needs to return a string or a Promise that resolves to a string.
-
-### Deploy
-
-Once you have built your bot, the only thing left to do is to choose the schedule and set up the environment variables in GitHub Actions.
-
-#### Schedule
-
-The schedule is controlled by the GitHub Actions workflow in [./.github/workflows/post.yml](./.github/workflows/post.yml). The [schedule trigger](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule) uses cron syntax to schedule when the workflow runs and your bot posts. [Crontab Guru](https://crontab.guru/) is a good way to visualise it.
-
-For example, the following YAML will schedule your bot to post at 5:30 and 17:30 every day.
-
-```yml
-on:
-  schedule:
-    - cron: "30 5,17 * * *"
-```
-
-Be warned that many GitHub Actions jobs are scheduled to happen on the hour, so that is a busy time and may see your workflow run later than expected or be dropped entirely.
-
-#### Environment variables
-
-In your repo's settings, under *Secrets and variables* > *Actions* you need to enter two Secrets to match your `.env` file. One secret should be called `BSKY_HANDLE` and contain your Bluesky username, and the other should be called `BSKY_PASSWORD` and contain your App Password that you generated for the bot account.
-
-### Set it live
-
-Once the schedule is set up and your Environment variables configured, push your changes to your repo and wait for the schedule to trigger the workflow. Your bot will start publishing posts based on your code.
-
-If you have any issues with that, please [raise an issue in this repo](https://github.com/philnash/bsky-bot/issues) or send me a message on Bluesky [@philna.sh](https://staging.bsky.app/profile/philna.sh).
+Honestly, I'm probably most reachable on Bluesky. My DMs are currently open; do not make me regret that.
