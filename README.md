@@ -3,13 +3,36 @@
 This is a template repo for building a [Bluesky](https://bsky.app/) bot that mirrors a Twitter/X account.
 
 ## Credits
-* Phil Nash for providing the code for building a bot that posts on its own schedule.
-* acarters for providing the code for building a bot that mirrors a Twitter/X account by pulling from existing mirror bots on Mastodon, due to the access restrictions on X's API.
+* [Phil Nash](https://github.com/philnash) for providing the code for building a bot that posts on its own schedule. [Phil Nash's Bluesky bot template](https://github.com/philnash/bsky-bot)
+* [acarters](https://github.com/acarters) for providing the code for building a bot that mirrors a Twitter/X account by pulling from existing mirror bots on Mastodon, due to the access restrictions on X's API.
 * I (Ben Ace) cannot stress enough how much I didn't do much to this code and can't take credit for any of this repo.
 
 ## FAQ
 
-###
+### How can I create my own?
+
+I created a [template with instructions](TK) on what to add or change in the README file. 
+
+### Does the bot post immediately when the Phillies account posts on Twitter?
+
+No. Sometimes I change tinker with this setting, but usually the bot is scheduled to check the [Mastodon mirror bot](TK) every 20 minutes. During busier times, like evenings (ET), which coincidentally is when the Phillies typically play and when their X/Twitter account posts the most often, this bot will check less often because Github's servers are running more repositories.
+
+Because of this, sometimes the bot will not check for up to 3 hours and catch up on posts from several innings, so the time stamp on the Bluesky mirror post should be taken with a grain of salt. 
+
+### This account liked one of my posts. Is it programmed to like posts its mentioned in?
+
+No, if [@notphillies.bsky.social] liked your post, it was an actual human, and that actual human is [@aceofbens.com](https://bsky.app/profile/aceofbens.com) on Bluesky.
+
+### Can you make a bot for [insert X/Twitter account]?
+
+If there is a mirror bot for it on Mastodon (check [@sportsbots@mastodon.social](https://www.sportsbots.xyz/)), then technically yes I can, but I don't have enough email addresses to make so many new Bluesky accounts. Try it yourself!
+
+### How can I make a Bluesky mirror bot that isn't available on sportsbots.xyz?
+
+
+
+
+
 
 This is a template repo for building [Bluesky](https://bsky.app/) bots that post on their own schedule. It uses [TypeScript](https://www.typescriptlang.org/) to build the bot and [GitHub Actions](https://docs.github.com/en/actions) to schedule the posts.
 
