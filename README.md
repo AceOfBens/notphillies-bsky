@@ -1,11 +1,12 @@
-# Bluesky Mirror Bot 🦋
+# Philadelphia Phillies Bluesky Mirror Bot 🦋
 
 This repository is used to build the bot that cross posts content from [@Phillies](https://x.com/Phillies) on X/Twitter to [@notphillies.bsky.social](https://bsky.app/profile/notphillies.bsky.social) on Bluesky by utilizing Mastodon's API to pull from the [Philadelphia Phillies mirror bot](https://mastodon.social/@Phillies@sportsbots.xyz) on sportsbots.xyz.
 
 ## Credits
-* [Phil Nash](https://github.com/philnash) for providing the code for building a bot that posts on its own schedule. [Phil Nash's Bluesky bot template](https://github.com/philnash/bsky-bot)
-* [acarters](https://github.com/acarters) for providing the code for building a bot that mirrors a X/Twitter account by pulling from existing mirror bots on Mastodon, due to the access restrictions on X's API. Most of the notes in the code that explain what each line does are from him.
-* I ([Ben Ace](https://bsky.app/profile/aceofbens.com/)) cannot stress enough how much I didn't do much to this code and can't take credit for any the building of this repo, but I did edit this template and outline the instructions below! I am not a developer but a [graphic designer and former content creator](https://aceofbens.com/) whose coding experience ends at tinkering with HTML and CSS on WordPress once in a while.
+* [Phil Nash](https://github.com/philnash) for providing the code for building a bot that posts on its own schedule.
+  * [Phil Nash's Bluesky bot template](https://github.com/philnash/bsky-bot)
+* [acarters](https://github.com/acarters) for providing the code for building a bot that mirrors an X/Twitter account by pulling from existing mirror bots on Mastodon, due to the access restrictions on X's API. Most of the notes in the code that explain what each line does are from him.
+* I ([Ben Ace](https://bsky.app/profile/aceofbens.com/)) cannot stress enough how much I didn't do much to this code and can't take credit for any the building of this repository, although I did create a template with an outline of how to create your own bot! I am not a developer but a [graphic designer and former content creator](https://aceofbens.com/) whose coding experience ends at tinkering with HTML and CSS on WordPress once in a while.
 
 ## FAQ
 
@@ -15,7 +16,7 @@ I created a [template with instructions](https://github.com/AceOfBens/sports-mir
 
 ### Does the bot post immediately when the Phillies account posts on Twitter?
 
-No. Sometimes I change tinker with this setting, but usually the bot is scheduled to check the [Mastodon mirror bot](https://mastodon.social/@Phillies@sportsbots.xyz) every 20 minutes. During busier times, like evenings (Eastern Time), which coincidentally is when the Phillies typically play and when their X/Twitter account posts the most often, this bot will check less often because Github's servers are running more repositories.
+No. Sometimes I change this setting, but usually the bot is scheduled to check the [Mastodon mirror bot](https://mastodon.social/@Phillies@sportsbots.xyz) every 20 minutes. During busier times, like evenings (Eastern Standard/Daylight Time), which coincidentally is when the Phillies typically play and when their X/Twitter account posts the most often, this bot will check less often because Github's servers are running more repositories.
 
 Because of this, sometimes the bot will not check for up to 3 hours and catch up on posts from several innings, so the time stamp on the Bluesky mirror post should not be used as a reference for anything other than when Github Actions ran a workflow for this bot. 
 
@@ -23,7 +24,7 @@ Because of this, sometimes the bot will not check for up to 3 hours and catch up
 
 No, there are no instances in which this bot is programmed to like posts on Bluesky. If [@notphillies.bsky.social](https://bsky.app/profile/notphillies.bsky.social) liked your post, it was an actual human, and that actual human is [@aceofbens.com](https://bsky.app/profile/aceofbens.com) on Bluesky.
 
-Generally, I try not to break the fourth wall on these mirror bot accounts. Even though I've taken every step to disclaim that the account is not officially affiliated with the Philadelphia Phillies in anyway, it feels disingenuous to make it about me by replying to fans or (re)posting content the Phillies have not shared on their official channels.
+Generally, I try not to break the fourth wall on these mirror bot accounts. Even though I've taken every step to disclaim that the account is not officially affiliated with the Philadelphia Phillies in any way, it feels disingenuous to make it about me by replying to fans or (re)posting content the Phillies have not shared on their official channels.
 
 That said, if the account is mentioned as a suggestion for someone to follow it, I appreciate that! So I like those posts to show that appreciation. Or, a few times, people have tagged this account to comment on a glitch, and I've liked those posts to let them know I'm aware of the issue and it has been or is being addressed.
 
@@ -41,7 +42,7 @@ Great question! If there's no Mastodon mirror bot like the ones on sportsbots.xy
 
 ### How long will this bot be up for?
 
-That depends on MLB and the Philadelphia Phillies. There have been reports that [the NFL has told their teams not to use Bluesky](https://awfulannouncing.com/nfl/new-england-patriots-bluesky-shut-down-account.html), but this doesn't necessarily seem to be the case as there are several domain-verified MLB accounts that are posting regularly including the [Kansas City Royals](https://bsky.app/profile/did:plc:3rkgpi6qhb4p6ne4jk2kspzw), the [Pittsburgh Pirates](https://bsky.app/profile/did:plc:xtjr2ecuxb6wqjr3jfbwdu3m), The [San Francisco Giants](https://bsky.app/profile/did:plc:7e75ce7c352cm2th5pwojwdw), the [Boston Red Sox](https://bsky.app/profile/did:plc:y4mxqslm4dyn6mx6pldyn75o), and even their division rival, the [New York Mets](https://bsky.app/profile/did:plc:5knhhenmnuq5vva3rr4vo3nh). Although, many of these "active" accounts aren't cross posting everything from their X/Twitter accounts. For that reason, I'm currently unsure how active the Phillies' Bluesky account would have to be before I unplug this bot. It will probably also depend how long people find this bot useful.
+That depends on MLB and the Philadelphia Phillies. There have been reports that [the NFL has told their teams not to use Bluesky](https://awfulannouncing.com/nfl/new-england-patriots-bluesky-shut-down-account.html), but this doesn't necessarily seem to be the case here as all 30 teams have created a domain-verified account and several of them are posting regularly including the [Kansas City Royals](https://bsky.app/profile/did:plc:3rkgpi6qhb4p6ne4jk2kspzw), the [Pittsburgh Pirates](https://bsky.app/profile/did:plc:xtjr2ecuxb6wqjr3jfbwdu3m), The [San Francisco Giants](https://bsky.app/profile/did:plc:7e75ce7c352cm2th5pwojwdw), the [Boston Red Sox](https://bsky.app/profile/did:plc:y4mxqslm4dyn6mx6pldyn75o), and even their division rival, the [New York Mets](https://bsky.app/profile/did:plc:5knhhenmnuq5vva3rr4vo3nh). However, many of these "active" accounts aren't cross posting everything from their X/Twitter accounts. For that reason, I'm currently unsure how active the Phillies' Bluesky account would have to be before I unplug this bot. It will probably come down to how long people find this bot useful.
 
 The Phillies made a Bluesky account in January 2025 that is domain verified ([@phillies.com](https://bsky.app/profile/phillies.com)), but as of now, they have not posted there yet, and it is unclear how much of a priority this may be. I do not know if contacting the Phillies will help push them to be active on Bluesky, and I do not recommend taking to other social media platforms to pester them, as [it's possible their social team is waiting on support from Bluesky's team](https://awfulannouncing.com/tech/bluesky-sports-top-priority-growth-spurt.html) before they begin adding the platform to their social media strategy.
 
